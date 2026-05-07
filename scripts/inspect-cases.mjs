@@ -14,6 +14,7 @@ const files = [
   'cases/03-conditional-spread-attr.astro',
   'cases/04-dynamic-tag-spread-expression-child.astro',
   'cases/05-dynamic-tag-multiple-spreads-expression-child.astro',
+  'cases/06-script-html-like-regex.astro',
 ];
 
 for (const file of files) {

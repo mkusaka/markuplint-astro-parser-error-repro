@@ -41,6 +41,7 @@ pnpm case:component-spread-descendant-expression-child
 pnpm case:conditional-spread
 pnpm case:dynamic-tag-spread
 pnpm case:dynamic-tag-multiple-spreads
+pnpm case:script-html-like-regex
 ```
 
 ## Cases
@@ -58,6 +59,7 @@ pnpm case:dynamic-tag-multiple-spreads
 | `cases/03-conditional-spread-attr.astro` | `pnpm case:conditional-spread` | Conditional spread attribute + expression child | `Invalid tag syntax` parse error |
 | `cases/04-dynamic-tag-spread-expression-child.astro` | `pnpm case:dynamic-tag-spread` | Dynamic tag + spread + expression child | `Invalid tag syntax` parse error |
 | `cases/05-dynamic-tag-multiple-spreads-expression-child.astro` | `pnpm case:dynamic-tag-multiple-spreads` | Dynamic tag + multiple spreads + expression child | `Invalid tag syntax` parse error |
+| `cases/06-script-html-like-regex.astro` | `pnpm case:script-html-like-regex` | Script body with an HTML-like regular expression | `Invalid tag syntax` parse error |
 
 `pnpm inspect` is useful for issue reports because it compares `astro-eslint-parser`
 diagnostics and direct `@markuplint/astro-parser` behavior. It shows that the spread

@@ -17,6 +17,7 @@
     "case:conditional-spread": "markuplint cases/03-conditional-spread-attr.astro --config .markuplintrc --no-color --problem-only",
     "case:dynamic-tag-spread": "markuplint cases/04-dynamic-tag-spread-expression-child.astro --config .markuplintrc --no-color --problem-only",
     "case:dynamic-tag-multiple-spreads": "markuplint cases/05-dynamic-tag-multiple-spreads-expression-child.astro --config .markuplintrc --no-color --problem-only",
+    "case:script-html-like-regex": "markuplint cases/06-script-html-like-regex.astro --config .markuplintrc --no-color --problem-only",
     "case:ok-inline": "markuplint cases/00-ok-explicit-is-inline.astro --config .markuplintrc --no-color --problem-only"
   },
   "devDependencies": {

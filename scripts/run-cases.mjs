@@ -45,6 +45,10 @@ const cases = [
     name: '05 parser error: dynamic tag + multiple spreads + expression child',
     file: 'cases/05-dynamic-tag-multiple-spreads-expression-child.astro',
   },
+  {
+    name: '06 parser error: script body with HTML-like regex',
+    file: 'cases/06-script-html-like-regex.astro',
+  },
 ];
 
 let unexpected = false;

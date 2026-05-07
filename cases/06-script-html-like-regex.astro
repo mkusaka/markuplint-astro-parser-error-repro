@@ -1,0 +1,33 @@
+---
+const title = 'Script HTML-like regex';
+---
+
+<!--
+  Run:
+    pnpm case:script-html-like-regex
+
+  Expected from astro-eslint-parser:
+    OK
+
+  Actual from @markuplint/astro-parser:
+    ParserError: SyntaxError: Invalid tag syntax: "
+      function normalizeDescription(source: string): string {
+        return source.replace(/<br\s*\/?>/gi, ' ');
+      }
+
+      console.log(normalizeDescription('line<br>break'));
+    </script>"
+
+  This mirrors a preview script pattern from:
+    apps/medixs/src/pages/event/seminar/preview.astro
+-->
+
+<h1>{title}</h1>
+
+<script>
+  function normalizeDescription(source: string): string {
+    return source.replace(/<br\s*\/?>/gi, ' ');
+  }
+
+  console.log(normalizeDescription('line<br>break'));
+</script>
