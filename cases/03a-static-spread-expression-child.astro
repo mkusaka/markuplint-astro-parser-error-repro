@@ -1,0 +1,24 @@
+---
+const props = { id: 'example' };
+const label = 'hello';
+---
+
+<!--
+Command:
+  pnpm case:static-spread-expression-child
+
+Expected:
+  markuplint exits with parse-error.
+
+Representative error:
+  SyntaxError: Invalid tag syntax: "<div {...props}>{label}</div>"
+
+Direct parser comparison:
+  pnpm inspect
+  astro-eslint-parser accepts this file.
+
+Scope note:
+  This is the smaller base pattern behind the spread + expression child failures.
+  A plain attribute with an expression child, and a spread attribute with a text child, are accepted.
+-->
+<div {...props}>{label}</div>

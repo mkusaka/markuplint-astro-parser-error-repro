@@ -10,11 +10,27 @@ const cases = [
     file: 'cases/01-astro-diagnostic-define-vars.astro',
   },
   {
+    name: '01b parser error: Astro diagnostic from type="module" without is:inline',
+    file: 'cases/01b-astro-diagnostic-type-module.astro',
+  },
+  {
+    name: '01c parser error: Astro diagnostic from data-* without is:inline',
+    file: 'cases/01c-astro-diagnostic-data-attr.astro',
+  },
+  {
+    name: '01d parser error: Astro diagnostic from defer without is:inline',
+    file: 'cases/01d-astro-diagnostic-defer.astro',
+  },
+  {
     name: '02 rule error: TS assertion spread tokenized as attrs',
     file: 'cases/02-spread-with-ts-assertion.astro',
   },
   {
-    name: '03 parser error: conditional spread attribute',
+    name: '03a parser error: static tag + spread + expression child',
+    file: 'cases/03a-static-spread-expression-child.astro',
+  },
+  {
+    name: '03 parser error: conditional spread attribute + expression child',
     file: 'cases/03-conditional-spread-attr.astro',
   },
   {

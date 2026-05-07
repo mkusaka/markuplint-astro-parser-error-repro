@@ -1,0 +1,18 @@
+<!--
+Command:
+  pnpm case:script-data-attr
+
+Expected:
+  markuplint exits with parse-error.
+  The error comes from an Astro compiler diagnostic surfaced by @markuplint/astro-parser.
+
+Representative error:
+  ParserError: This script will be treated as if it has the `is:inline` directive because it contains an attribute.
+
+Direct parser comparison:
+  pnpm inspect
+  astro-eslint-parser returns diagnostic code=4000 severity=4 for this file.
+-->
+<script data-widget="example">
+  console.log('hello');
+</script>

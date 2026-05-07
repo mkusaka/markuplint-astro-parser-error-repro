@@ -5,7 +5,11 @@ import { parser as markuplintAstroParser } from '@markuplint/astro-parser';
 const files = [
   'cases/00-ok-explicit-is-inline.astro',
   'cases/01-astro-diagnostic-define-vars.astro',
+  'cases/01b-astro-diagnostic-type-module.astro',
+  'cases/01c-astro-diagnostic-data-attr.astro',
+  'cases/01d-astro-diagnostic-defer.astro',
   'cases/02-spread-with-ts-assertion.astro',
+  'cases/03a-static-spread-expression-child.astro',
   'cases/03-conditional-spread-attr.astro',
   'cases/04-dynamic-tag-spread-expression-child.astro',
   'cases/05-dynamic-tag-multiple-spreads-expression-child.astro',

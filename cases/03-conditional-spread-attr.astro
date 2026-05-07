@@ -16,5 +16,9 @@ Representative error:
 Direct parser comparison:
   pnpm inspect
   astro-eslint-parser accepts this file.
+
+Scope note:
+  This is not textarea-specific. The smaller base failure is a spread attribute
+  and an expression child on the same element; see cases/03a-static-spread-expression-child.astro.
 -->
 <textarea {...fieldSizingContent ? { 'data-field-sizing': 'content' } : {}}>{value}</textarea>
