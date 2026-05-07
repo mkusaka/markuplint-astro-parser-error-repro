@@ -1,0 +1,1 @@
+# markuplint-astro-parser-error-repro
