@@ -37,6 +37,7 @@ pnpm case:script-data-attr
 pnpm case:script-defer
 pnpm case:ts-assertion-spread
 pnpm case:static-spread-expression-child
+pnpm case:component-spread-descendant-expression-child
 pnpm case:conditional-spread
 pnpm case:dynamic-tag-spread
 pnpm case:dynamic-tag-multiple-spreads
@@ -53,6 +54,7 @@ pnpm case:dynamic-tag-multiple-spreads
 | `cases/01d-astro-diagnostic-defer.astro` | `pnpm case:script-defer` | `<script defer>` without explicit `is:inline` | Astro diagnostic is surfaced as markuplint `parse-error` |
 | `cases/02-spread-with-ts-assertion.astro` | `pnpm case:ts-assertion-spread` | `{...{ command: 'close' } as any}` | Parsed as spread + bogus `as` / `any}` attrs, then reported by `invalid-attr` |
 | `cases/03a-static-spread-expression-child.astro` | `pnpm case:static-spread-expression-child` | Static tag + spread attribute + expression child | `Invalid tag syntax` parse error |
+| `cases/03b-component-spread-descendant-expression-child.astro` | `pnpm case:component-spread-descendant-expression-child` | Component spread attribute + descendant expression child | `Invalid tag syntax` parse error |
 | `cases/03-conditional-spread-attr.astro` | `pnpm case:conditional-spread` | Conditional spread attribute + expression child | `Invalid tag syntax` parse error |
 | `cases/04-dynamic-tag-spread-expression-child.astro` | `pnpm case:dynamic-tag-spread` | Dynamic tag + spread + expression child | `Invalid tag syntax` parse error |
 | `cases/05-dynamic-tag-multiple-spreads-expression-child.astro` | `pnpm case:dynamic-tag-multiple-spreads` | Dynamic tag + multiple spreads + expression child | `Invalid tag syntax` parse error |

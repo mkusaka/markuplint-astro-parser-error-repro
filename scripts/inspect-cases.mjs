@@ -10,6 +10,7 @@ const files = [
   'cases/01d-astro-diagnostic-defer.astro',
   'cases/02-spread-with-ts-assertion.astro',
   'cases/03a-static-spread-expression-child.astro',
+  'cases/03b-component-spread-descendant-expression-child.astro',
   'cases/03-conditional-spread-attr.astro',
   'cases/04-dynamic-tag-spread-expression-child.astro',
   'cases/05-dynamic-tag-multiple-spreads-expression-child.astro',

@@ -30,6 +30,10 @@ const cases = [
     file: 'cases/03a-static-spread-expression-child.astro',
   },
   {
+    name: '03b parser error: component spread + descendant expression child',
+    file: 'cases/03b-component-spread-descendant-expression-child.astro',
+  },
+  {
     name: '03 parser error: conditional spread attribute + expression child',
     file: 'cases/03-conditional-spread-attr.astro',
   },

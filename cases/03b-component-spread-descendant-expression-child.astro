@@ -1,0 +1,27 @@
+---
+const enabled = true;
+const title = 'hello';
+---
+
+<!--
+Command:
+  pnpm case:component-spread-descendant-expression-child
+
+Expected:
+  markuplint exits with parse-error.
+
+Representative error:
+  SyntaxError: Invalid tag syntax: "<Comp {...enabled ? { title: title } : {}}><div>{title}</div></Comp>"
+
+Direct parser comparison:
+  pnpm inspect
+  astro-eslint-parser accepts this file.
+
+Scope note:
+  This matches the EventPost pattern from apps/clinics-cloud/src/pages/seminar/[eventId].astro:
+  a component has a spread attribute, and its rendered children contain a descendant
+  element with an Astro expression child.
+-->
+<Comp {...enabled ? { title: title } : {}}>
+  <div>{title}</div>
+</Comp>

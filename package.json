@@ -13,6 +13,7 @@
     "case:script-defer": "markuplint cases/01d-astro-diagnostic-defer.astro --config .markuplintrc --no-color --problem-only",
     "case:ts-assertion-spread": "markuplint cases/02-spread-with-ts-assertion.astro --config .markuplintrc --no-color --problem-only",
     "case:static-spread-expression-child": "markuplint cases/03a-static-spread-expression-child.astro --config .markuplintrc --no-color --problem-only",
+    "case:component-spread-descendant-expression-child": "markuplint cases/03b-component-spread-descendant-expression-child.astro --config .markuplintrc --no-color --problem-only",
     "case:conditional-spread": "markuplint cases/03-conditional-spread-attr.astro --config .markuplintrc --no-color --problem-only",
     "case:dynamic-tag-spread": "markuplint cases/04-dynamic-tag-spread-expression-child.astro --config .markuplintrc --no-color --problem-only",
     "case:dynamic-tag-multiple-spreads": "markuplint cases/05-dynamic-tag-multiple-spreads-expression-child.astro --config .markuplintrc --no-color --problem-only",
