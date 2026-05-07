@@ -1,0 +1,22 @@
+{
+  "name": "markuplint-astro-parser-error-repro",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.26.2",
+  "scripts": {
+    "repro": "node scripts/run-cases.mjs",
+    "inspect": "node scripts/inspect-cases.mjs",
+    "case:astro-diagnostic": "markuplint cases/01-astro-diagnostic-define-vars.astro --config .markuplintrc --no-color --problem-only",
+    "case:ts-assertion-spread": "markuplint cases/02-spread-with-ts-assertion.astro --config .markuplintrc --no-color --problem-only",
+    "case:conditional-spread": "markuplint cases/03-conditional-spread-attr.astro --config .markuplintrc --no-color --problem-only",
+    "case:dynamic-tag-spread": "markuplint cases/04-dynamic-tag-spread-expression-child.astro --config .markuplintrc --no-color --problem-only",
+    "case:dynamic-tag-multiple-spreads": "markuplint cases/05-dynamic-tag-multiple-spreads-expression-child.astro --config .markuplintrc --no-color --problem-only",
+    "case:ok-inline": "markuplint cases/00-ok-explicit-is-inline.astro --config .markuplintrc --no-color --problem-only"
+  },
+  "devDependencies": {
+    "@markuplint/astro-parser": "4.18.0",
+    "astro-eslint-parser": "1.4.0",
+    "markuplint": "4.18.1"
+  }
+}

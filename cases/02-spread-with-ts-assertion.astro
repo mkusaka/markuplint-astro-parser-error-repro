@@ -1,0 +1,25 @@
+<!--
+Command:
+  pnpm case:ts-assertion-spread
+
+Expected:
+  markuplint exits with invalid-attr errors, not parse-error.
+  @markuplint/astro-parser accepts the file but tokenizes the spread incorrectly.
+
+Representative errors:
+  The "as" attribute is disallowed (invalid-attr)
+  The "any}" attribute is disallowed (invalid-attr)
+
+Direct parser comparison:
+  pnpm inspect
+  astro-eslint-parser accepts this file.
+  @markuplint/astro-parser builds attrs like:
+    spread raw="{...{ command: 'close' }"
+    attr name="as"
+    attr name="any}"
+-->
+<dialog id="dialog-id" aria-label="dialog"></dialog>
+
+<button type="button" {...{ command: 'close' } as any} commandfor="dialog-id">
+  close
+</button>

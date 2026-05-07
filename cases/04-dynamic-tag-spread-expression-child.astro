@@ -1,0 +1,21 @@
+---
+const ContainerTag = 'a';
+const containerProps = { href: '/' };
+const title = 'hello';
+---
+
+<!--
+Command:
+  pnpm case:dynamic-tag-spread
+
+Expected:
+  markuplint exits with parse-error.
+
+Representative error:
+  SyntaxError: Invalid tag syntax: "<ContainerTag class="container" {...containerProps}>{title}</ContainerTag>"
+
+Direct parser comparison:
+  pnpm inspect
+  astro-eslint-parser accepts this file.
+-->
+<ContainerTag class="container" {...containerProps}>{title}</ContainerTag>

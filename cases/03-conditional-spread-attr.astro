@@ -1,0 +1,20 @@
+---
+const fieldSizingContent = true;
+const value = 'hello';
+---
+
+<!--
+Command:
+  pnpm case:conditional-spread
+
+Expected:
+  markuplint exits with parse-error.
+
+Representative error:
+  SyntaxError: Invalid tag syntax: "<textarea {...fieldSizingContent ? { 'data-field-sizing': 'content' } : {}}>{value}</textarea>"
+
+Direct parser comparison:
+  pnpm inspect
+  astro-eslint-parser accepts this file.
+-->
+<textarea {...fieldSizingContent ? { 'data-field-sizing': 'content' } : {}}>{value}</textarea>

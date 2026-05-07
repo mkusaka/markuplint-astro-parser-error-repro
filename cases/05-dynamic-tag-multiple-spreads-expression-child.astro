@@ -1,0 +1,32 @@
+---
+const Element = 'button';
+const iconOnly = true;
+const label = 'close';
+const rest = { id: 'close-button' };
+---
+
+<!--
+Command:
+  pnpm case:dynamic-tag-multiple-spreads
+
+Expected:
+  markuplint exits with parse-error.
+
+Representative error:
+  SyntaxError: Invalid tag syntax: "<Element
+    {...iconOnly ? { title: label } : {}}
+    {...rest}
+  >
+    {label}
+  </Element>"
+
+Direct parser comparison:
+  pnpm inspect
+  astro-eslint-parser accepts this file.
+-->
+<Element
+  {...iconOnly ? { title: label } : {}}
+  {...rest}
+>
+  {label}
+</Element>
